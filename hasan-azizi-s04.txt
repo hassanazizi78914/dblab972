@@ -1,0 +1,4 @@
+select count(*), username from mytable group by username;
+
+select count(*), name from student group by name HAVING COUNT(*) >= 2
+

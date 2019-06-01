@@ -1,0 +1,34 @@
+
+CREATE TABLE student
+(
+ id int unsigned NOT NULL auto_increment,
+ name varchar(100) NOT NULL,
+ family varchar(100) NOT NULL,
+ phoneno varchar(100) NOT NULL,
+ email varchar(100) NOT NULL,
+ PRIMARY KEY (id)
+);
+
+INSERT INTO student ( name,family,phoneno, email )
+VALUES ( "ahmad","alavi","0910", "ahmad@example.com" );
+INSERT INTO student ( name,family,phoneno, email )
+VALUES ( 'hamid','doosti','0912', 'hamid@example.com' );
+INSERT INTO student ( name,family,phoneno, email )
+VALUES ( "ali","alavi","0919", "ali@example.com" );
+INSERT INTO student (name,family,phoneno, email )
+VALUES ( 'hamid','karimi','0939', 'karimi@example.com' );
+
+SELECT mytable.username, student.name
+FROM `student`
+INNER JOIN `mytable` on mytable.id = student.id;
+SELECT mytable.username, student.name
+FROM `student`
+LEFT JOIN `mytable` on mytable.id = student.id;
+SELECT mytable.username, student.name
+FROM `student`
+RIGHT JOIN `mytable` on mytable.id = student.id;
+
+select name, family from student union select username, email from mytable
+
+select name, family from student union select username, email from mytable ORDER BY name
+

@@ -1,0 +1,19 @@
+select count(id) from mytable;
+
+select max(id) from mytable;
+
+select min(id) from mytable;
+
+select concat(id,username) from mytable;
+
+select replace(username,'a','e') from mytable;
+
+select *from mytable where id>1 and id<3;
+
+select *from mytable order by id desc;
+
+select *from mytable order by id asc;
+
+select *from mytable where username like '%l%';
+
+select *from mytable where email like 'a%';
